@@ -607,5 +607,212 @@ body {
     padding: 0 20px;
   }
 }
+/* ────────────────────────────────────────────────
+   ACCESSIBILITÀ + RESPONSIVE IMPROVEMENTS
+──────────────────────────────────────────────── */
+
+/* Focus visibile per tastiera */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Migliore contrasto testi */
+.hero-desc,
+.section-sub,
+.benefit-card p,
+.step p,
+.signup-text p {
+  color: #3a3a3a;
+}
+
+/* Placeholder più leggibili */
+input::placeholder,
+select {
+  color: #666;
+}
+
+/* Migliora leggibilità generale */
+body {
+  line-height: 1.5;
+}
+
+/* Evita overflow orizzontale */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Bottoni più accessibili */
+.btn-primary,
+.btn-submit {
+  min-height: 48px;
+}
+
+/* ────────────────────────────────────────────────
+   ANIMAZIONE HERO BUTTON
+──────────────────────────────────────────────── */
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.25),
+    transparent
+  );
+  transition: left .7s ease;
+}
+
+.btn-primary:hover::before {
+  left: 120%;
+}
+
+/* ────────────────────────────────────────────────
+   TABLET RESPONSIVE (max-width: 768px)
+──────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 14px 18px;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 110px 20px 50px;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.15;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /* Produce grid */
+  .produce-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    width: 100%;
+  }
+
+  .produce-card {
+    padding: 20px 14px;
+    font-size: 2rem;
+  }
+
+  /* Sections */
+  .how-it-works,
+  .benefits,
+  .faq-section,
+  .signup-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-sub {
+    margin-bottom: 40px;
+  }
+
+  /* Steps */
+  .step {
+    padding: 30px 22px;
+  }
+
+  .step-number {
+    font-size: 2.2rem;
+  }
+
+  /* Cards */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    padding: 28px 22px;
+  }
+
+  /* Signup */
+  .signup-wrapper {
+    gap: 30px;
+  }
+
+  .signup-form-box {
+    padding: 30px 24px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-inner {
+    gap: 24px;
+  }
+
+  .footer-bottom p {
+    font-size: .75rem;
+    line-height: 1.6;
+  }
+}
+
+/* ────────────────────────────────────────────────
+   MOBILE EXTRA SMALL (max-width: 480px)
+──────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .produce-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-primary,
+  .btn-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .faq-question {
+    font-size: .9rem;
+    text-align: left;
+  }
+
+  .signup-form-box {
+    padding: 24px 18px;
+  }
+}
 }
 
