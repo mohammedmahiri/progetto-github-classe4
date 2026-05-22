@@ -63,36 +63,88 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+// ── INVIO FORM ───────────────────────────────────
+form.addEventListener('submit', (e) => {
 
-    const n1 = validaNome();
-    const n2 = validaEmail();
-    const n3 = validaCitta();
+  // Blocca il refresh della pagina
+  e.preventDefault();
 
-    if (!n1 || !n2 || !n3) return;
+  let valido = true;
 
-    const nome  = nomeInput.value.trim();
-    const email = emailInput.value.trim();
-    const citta = cittaInput.value;
+  // Reset errori
+  errNome.textContent = '';
+  errEmail.textContent = '';
+  errCitta.textContent = '';
 
-    // Mostra spinner simulando invio
-    submitBtn.disabled = true;
-    spinner.style.display = 'inline';
-    submitBtn.querySelector('.btn-text').textContent = 'Invio in corso…';
+  nomeInput.style.borderColor = '';
+  emailInput.style.borderColor = '';
+  cittaInput.style.borderColor = '';
 
-    setTimeout(() => {
-      // Nasconde form, mostra messaggio personalizzato
-      form.style.display = 'none';
-      confirmMsg.style.display = 'block';
-      confirmText.textContent =
-        `Grazie ${nome}! Ti abbiamo aggiunto alla lista di lancio per ${citta}. ` +
-        `Riceverai aggiornamenti esclusivi all'indirizzo ${email}.`;
+  // ── Validazione NOME ───────────────────────────
+  if (nomeInput.value.trim() === '') {
+    errNome.textContent = 'Inserisci il tuo nome.';
+    nomeInput.style.borderColor = '#d94040';
+    valido = false;
+  }
 
-      // Confetti leggero con emoji 🎉
-      lanciaConfetti();
-    }, 1400);
-  });
+  // ── Validazione EMAIL ──────────────────────────
+  if (emailInput.value.trim() === '') {
+
+    errEmail.textContent = 'Inserisci la tua email.';
+    emailInput.style.borderColor = '#d94040';
+    valido = false;
+
+  } else {
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailInput.value.trim())) {
+      errEmail.textContent = 'Email non valida.';
+      emailInput.style.borderColor = '#d94040';
+      valido = false;
+    }
+  }
+
+  // ── Validazione CITTÀ ──────────────────────────
+  if (cittaInput.value === '') {
+    errCitta.textContent = 'Seleziona una città.';
+    cittaInput.style.borderColor = '#d94040';
+    valido = false;
+  }
+
+  // Se il form NON è valido → stop
+  if (!valido) return;
+
+  // ── Simulazione invio ──────────────────────────
+  submitBtn.disabled = true;
+  spinner.style.display = 'inline-block';
+
+  submitBtn.querySelector('.btn-text').textContent =
+    'Invio in corso...';
+
+  // Simula richiesta server
+  setTimeout(() => {
+
+    // Nasconde il form
+    form.style.display = 'none';
+
+    // Mostra messaggio dinamico
+    confirmMsg.style.display = 'block';
+
+    confirmText.innerHTML = `
+      Grazie <strong>${nomeInput.value}</strong>!<br>
+      Ti abbiamo registrato per la città di
+      <strong>${cittaInput.value}</strong>.<br>
+      Riceverai aggiornamenti esclusivi a:
+      <strong>${emailInput.value}</strong>.
+    `;
+
+    // Confetti
+    lanciaConfetti();
+
+  }, 1400);
+
+});
 
   // ── Confetti emoji ──────────────────────────────────────────
   function lanciaConfetti() {
