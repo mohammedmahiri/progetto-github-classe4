@@ -1,224 +1,67 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
- 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreshRoute – Prodotti Locali a Domicilio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-</head>
-<body>
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <span class="section-label">Domande frequenti</span>
+    <h2 class="section-title">Tutto quello che vuoi sapere</h2>
 
-  <!-- NAV -->
-  <nav class="navbar">
-    <div class="nav-logo">
-      <span class="logo-leaf"></span> FreshRoute
-    </div>
-    <ul class="nav-links">
-      <li><a href="#come-funziona">Come funziona</a></li>
-      <li><a href="#vantaggi">Vantaggi</a></li>
-      <li><a href="#iscriviti">Iscriviti</a></li>
-    </ul>
-  </nav>
+    <div class="faq-container">
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-    </div>
-    <div class="hero-content">
-      <span class="hero-badge"> Km 0 · Locale · Sostenibile</span>
-      <h1 class="hero-title">
-        Dal campo<br />
-        <em>alla tua porta.</em><br />
-        Fresco ogni giorno.
-      </h1>
-      <p class="hero-desc">
-        FreshRoute collega i produttori agricoli locali direttamente con te.
-        Frutta, verdura e prodotti genuini consegnati a casa tua,
-        senza intermediari, senza sprechi.
-      </p>
-      <a href="#iscriviti" class="btn-primary">
-        Iscriviti ora
-        <span class="btn-arrow">→</span>
-      </a>
-      <p class="hero-note">Lancia ufficiale in Lombardia · Primavera 2025</p>
-    </div>
-    <div class="hero-visual">
-      <div class="produce-grid">
-        <div class="produce-card" style="--delay:0s"><span>Pomodori</span></div>
-        <div class="produce-card" style="--delay:.1s"><span>Carote</span></div>
-        <div class="produce-card" style="--delay:.2s"><span>Limoni</span></div>
-        <div class="produce-card" style="--delay:.3s"><span>Broccoli</span></div>
-        <div class="produce-card" style="--delay:.4s"><span>Fragole</span></div>
-        <div class="produce-card" style="--delay:.5s"><span>Cipolle</span></div>
-      </div>
-    </div>
-  </section>
+      <div class="faq-item active">
+        <button class="faq-question">
+          Quanto costa la consegna?
+          <span class="faq-icon">+</span>
+        </button>
 
-  <!-- COME FUNZIONA -->
-  <section class="how-it-works" id="come-funziona">
-    <div class="container">
-      <span class="section-label">Il processo</span>
-      <h2 class="section-title">Come funziona FreshRoute</h2>
-      <p class="section-sub">Tre passi semplici per ricevere il meglio della campagna ogni settimana.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-icon"></div>
-          <div class="step-number">01</div>
-          <h3>Scegli i produttori</h3>
-          <p>Esplora la mappa dei produttori locali nella tua zona. Leggi la loro storia, scopri i loro prodotti di stagione.</p>
-        </div>
-        <div class="step-connector">
-          <div class="connector-line"></div>
-          <div class="connector-dot"></div>
-        </div>
-        <div class="step">
-          <div class="step-icon"></div>
-          <div class="step-number">02</div>
-          <h3>Componi la tua cassetta</h3>
-          <p>Scegli cosa ti serve o affidati alla cassetta della settimana, curata dai nostri produttori con il meglio di stagione.</p>
-        </div>
-        <div class="step-connector">
-          <div class="connector-line"></div>
-          <div class="connector-dot"></div>
-        </div>
-        <div class="step">
-          <div class="step-icon"></div>
-          <div class="step-number">03</div>
-          <h3>Ricevi a domicilio</h3>
-          <p>La consegna avviene entro 24 ore dal raccolto. Fresco, tracciato e imballato in materiali biodegradabili.</p>
+        <div class="faq-answer">
+          <p>
+            La consegna è gratuita sopra i 35€. Per ordini inferiori,
+            il costo varia da 2,90€ a 4,90€ in base alla zona.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- VANTAGGI -->
-  <section class="benefits" id="vantaggi">
-    <div class="container">
-      <span class="section-label">Perché sceglierci</span>
-      <h2 class="section-title">I vantaggi FreshRoute</h2>
-      <div class="cards-grid">
-        <div class="benefit-card">
-          <div class="card-icon"></div>
-          <h3>100% Km 0</h3>
-          <p>Ogni prodotto percorre meno di 50 km dalla raccolta alla tua porta. Zero CO₂ inutile, zero catena del freddo artificiale.</p>
-        </div>
-        <div class="benefit-card featured">
-          <div class="card-icon"></div>
-          <h3>Supporti i produttori locali</h3>
-          <p>Il 90% del prezzo va direttamente al contadino. Compri con coscienza, fai crescere la tua comunità.</p>
-          <div class="card-badge">Il più amato</div>
-        </div>
-        <div class="benefit-card">
-          <div class="card-icon"></div>
-          <h3>Imballaggi ecologici</h3>
-          <p>Nessuna plastica. Cassette in legno riutilizzabili, sacchi in juta, ghiaccio secco vegetale per il fresco.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="card-icon"></div>
-          <h3>Flessibilità totale</h3>
-          <p>Ordina quando vuoi. Pausa, modifica o cancella il tuo abbonamento in un click, senza penali.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="card-icon"></div>
-          <h3>Piena tracciabilità</h3>
-          <p>Ogni prodotto ha una storia. Scansiona il QR sulla cassetta e scopri chi l'ha coltivato, dove e quando.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="card-icon"></div>
-          <h3>Prezzi onesti</h3>
-          <p>Prezzi allineati al supermercato, qualità superiore. Senza markup speculativi, senza sorprese in bolletta.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="faq-item">
+        <button class="faq-question">
+          Posso scegliere i prodotti?
+          <span class="faq-icon">+</span>
+        </button>
 
-  <!-- FORM ISCRIZIONE -->
-  <section class="signup-section" id="iscriviti">
-    <div class="signup-wrapper">
-      <div class="signup-text">
-        <span class="section-label light">Unisciti a noi</span>
-        <h2>Sii tra i primi<br />a ricevere FreshRoute.</h2>
-        <p>Iscriviti alla nostra newsletter di lancio. Riceverai aggiornamenti esclusivi, offerte per i primi iscritti e la data esatta del lancio nella tua città.</p>
-        <ul class="signup-perks">
-          <li>✓ Prima cassetta al 30% di sconto</li>
-          <li>✓ Accesso anticipato alla selezione produttori</li>
-          <li>✓ Zero spam — lo promettiamo</li>
-        </ul>
-      </div>
-      <div class="signup-form-box">
-        <form id="signupForm" novalidate>
-          <div class="form-group">
-            <label for="nome">Il tuo nome</label>
-            <input type="text" id="nome" name="nome" placeholder="es. Giulia Bianchi" required />
-            <span class="error-msg" id="errNome"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">La tua email</label>
-            <input type="email" id="email" name="email" placeholder="es. giulia@email.it" required />
-            <span class="error-msg" id="errEmail"></span>
-          </div>
-          <div class="form-group">
-            <label for="citta">La tua città</label>
-            <select id="citta" name="citta" required>
-              <option value="" disabled selected>Seleziona città</option>
-              <option>Milano</option>
-              <option>Bergamo</option>
-              <option>Brescia</option>
-              <option>Monza</option>
-              <option>Varese</option>
-              <option>Altra città</option>
-            </select>
-            <span class="error-msg" id="errCitta"></span>
-          </div>
-          <button type="submit" class="btn-submit" id="submitBtn">
-            <span class="btn-text">Iscriviti ora</span>
-            <span class="btn-spinner" id="spinner" style="display:none"></span>
-          </button>
-        </form>
-        <!-- MESSAGGIO CONFERMA -->
-        <div class="confirm-msg" id="confirmMsg">
-          <div class="confirm-icon"></div>
-          <h3>Benvenuto in FreshRoute!</h3>
-          <p id="confirmText"></p>
-          <p class="confirm-sub">Controlla la tua casella di posta per confermare l'iscrizione.</p>
+        <div class="faq-answer">
+          <p>
+            Sì. Puoi creare la tua cassetta personalizzata oppure
+            scegliere la selezione settimanale dei produttori locali.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo-leaf">🌿</span> FreshRoute
-        <p>Prodotti locali, consegne sostenibili.<br />La filiera corta che fa bene a tutti.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Seguici</h4>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram" class="social-btn"> Instagram</a>
-          <a href="#" aria-label="Facebook" class="social-btn"> Facebook</a>
-          
+      <div class="faq-item">
+        <button class="faq-question">
+          Da dove arrivano i prodotti?
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Collaboriamo con aziende agricole locali della Lombardia,
+            selezionate per qualità, sostenibilità e trasparenza.
+          </p>
         </div>
       </div>
-      <div class="footer-contact">
-        <h4>Contatti</h4>
-        <p>ciao@freshroute.it</p>
-        <p>02 1234 5678</p>
-        <p>Milano, Lombardia</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 FreshRoute S.r.l. · P.IVA 12345678901 · <a href="#">Privacy Policy</a> · <a href="#">Cookie</a></p>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
+      <div class="faq-item">
+        <button class="faq-question">
+          Posso annullare l'abbonamento?
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Certamente. Puoi mettere in pausa o annullare il tuo
+            abbonamento in qualsiasi momento senza costi aggiuntivi.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
