@@ -146,5 +146,23 @@ document.addEventListener('DOMContentLoaded', () => {
       ? '0 4px 20px rgba(0,0,0,.10)'
       : 'none';
   });
+// ── FAQ ACCORDION ───────────────────────────────
+const faqItems = document.querySelectorAll('.faq-item');
 
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+
+  question.addEventListener('click', () => {
+
+    // Chiude tutte le altre FAQ
+    faqItems.forEach(faq => {
+      if (faq !== item) {
+        faq.classList.remove('active');
+      }
+    });
+
+    // Toggle della FAQ cliccata
+    item.classList.toggle('active');
+  });
+});
 });
