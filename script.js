@@ -154,7 +154,7 @@ form.addEventListener('submit', (e) => {
 
     for (let i = 0; i < 18; i++) {
       const el = document.createElement('span');
-      el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      el.textContent = emojis[Math.floor(Math.random() * emojis.length)];//calcola random le emoji basandosi sulla lunghezza del vettore
       el.style.cssText = `
         position: fixed;
         left: ${rect.left + Math.random() * rect.width}px;
